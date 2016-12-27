@@ -5,8 +5,8 @@ var grpc = require('grpc');
 var protoCatalog = grpc.load('../proto/local/localcatalogservice.proto').proto;
 var protoIMDB = grpc.load('../proto/imdb/imdbservice.proto').proto;
 
-var localClient = new protoCatalog.LocalCatalogService('backend:50051', grpc.credentials.createInsecure());
-var imdbClient = new protoIMDB.IMDBService('backend:50052', grpc.credentials.createInsecure());
+var localClient = new protoCatalog.LocalCatalogService('microservice1:50051', grpc.credentials.createInsecure());
+var imdbClient = new protoIMDB.IMDBService('microservice2:50052', grpc.credentials.createInsecure());
 
 var getLocalCatalogByGenre = (request, response) => {
 	var genres = [];
