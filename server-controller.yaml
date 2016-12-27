@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: server
+    spec:
+      containers:
+      - image: gcr.io/smart-spark-93622/server:1.0
+        name: server
+        ports:
+        - containerPort: 3000
+          name: http-server

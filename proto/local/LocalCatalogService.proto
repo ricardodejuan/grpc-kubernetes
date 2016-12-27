@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+import "LocalProduct.proto";
+
+service LocalCatalogService {
+	rpc LocalCatalogByGenre (stream Request) returns (Response) {}
+}
+
+message Request {
+	string genre = 1;
+}
+
+message Response {
+	repeated LocalProduct products = 1;
+}

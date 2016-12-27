@@ -1,0 +1,18 @@
+{
+  "name": "CatalogMicroservice2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gRPC + Kubernetes",
+  "scripts": {
+    "start": "node catalogMicroservice.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "grpc": "~1.0.1",
+    "lodash": "^4.17.2"
+  }
+}

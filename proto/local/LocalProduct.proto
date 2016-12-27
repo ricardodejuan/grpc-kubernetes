@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package proto;
+
+message LocalProduct {
+
+      string id =1 ;
+      string title = 2;
+      repeated string genres = 3;
+      string rating = 4;
+
+}

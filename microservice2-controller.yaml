@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: microservice2
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        name: microservice2
+    spec:
+      containers:
+      - image: gcr.io/smart-spark-93622/microservice2:1.0
+        name: microservice2
+        ports:
+        - containerPort: 50052
+          name: microservice2

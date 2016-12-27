@@ -1,0 +1,17 @@
+{
+  "name": "NodeServer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gRPC + Kubernetes",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "grpc": "~1.0.1",
+    "lodash": "^4.17.2"
+  }
+}
