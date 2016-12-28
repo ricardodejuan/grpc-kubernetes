@@ -1,2 +1,2 @@
-FROM grpc/node:0.10-onbuild
+FROM grpc/node:6-onbuild
 EXPOSE 3000
