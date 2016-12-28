@@ -1,6 +1,6 @@
 var _ = require('lodash');
 var grpc = require('grpc');
-var proto = grpc.load(__dirname + '/../proto/local/localcatalogservice.proto').proto;
+var proto = grpc.load(__dirname + '/../proto/local/LocalCatalogService.proto').proto;
 
 var catalog = [
 				{id: "1", title: "Band of Brothers", genres: ["Action", "Drama", "History"], rating: "9.5"}, 
