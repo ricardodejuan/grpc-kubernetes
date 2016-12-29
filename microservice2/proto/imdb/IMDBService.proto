@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+import "Element.proto";
+
+service IMDBService {
+	rpc CatalogByKeyword (Request) returns (stream Response) {}
+}
+
+message Request {
+	string keyword = 1;
+}
+
+message Response {
+	Element element = 1;
+	string source = 2;
+}
