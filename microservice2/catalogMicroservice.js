@@ -2,7 +2,7 @@ var _ = require('lodash');
 var async = require('async');
 var http = require('http');
 var grpc = require('grpc');
-var proto = grpc.load('../proto/imdb/imdbservice.proto').proto;
+var proto = grpc.load(__dirname + '/proto/imdb/imdbservice.proto').proto;
 
 const IMDBURL = "http://imdb.wemakesites.net/api/search?q=";
 const API_KEY = "d1b79452-6051-4873-b029-98dbc072f8c0";

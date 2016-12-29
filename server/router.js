@@ -2,8 +2,8 @@ var url = require('url');
 var _ = require('lodash');
 
 var grpc = require('grpc');
-var protoCatalog = grpc.load('../proto/local/localcatalogservice.proto').proto;
-var protoIMDB = grpc.load('../proto/imdb/imdbservice.proto').proto;
+var protoCatalog = rpc.load(__dirname + '/proto/local/localcatalogservice.proto').proto;
+var protoIMDB = rpc.load(__dirname + '/proto/imdb/imdbservice.proto').proto;
 
 var localClient = new protoCatalog.LocalCatalogService('microservice1:50051', grpc.credentials.createInsecure());
 var imdbClient = new protoIMDB.IMDBService('microservice2:50052', grpc.credentials.createInsecure());

@@ -4,7 +4,8 @@
   "private": true,
   "description": "gRPC + Kubernetes",
   "scripts": {
-    "start": "node catalogMicroservice.js"
+    "start": "node catalogMicroservice.js",
+    "postinstall": "npm install --update-binary"
   },
   "repository": {
     "type": "git",
