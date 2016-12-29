@@ -10,6 +10,10 @@
     "type": "git",
     "url": ""
   },
+  "engineStrict": true,
+  "engines": {
+    "node": "6.6.0"
+  },
   "dependencies": {
     "async": "^2.1.4",
     "grpc": "~1.0.1",
