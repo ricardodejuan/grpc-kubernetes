@@ -25,7 +25,9 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ gcloud container clusters get-credentials k0	
 	```
 
-7. Clean all images
+7. Clone this repository 
+
+8. Clean all images
 
 	```sh
 	$ PROJECTID=$(gcloud config list project | awk 'FNR ==2 { print $3 }')
@@ -33,7 +35,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ ./clean.sh
 	```
 
-8. Build Containers
+9. Build Containers
 
 	```sh
 	# Container microservice1
@@ -46,7 +48,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ docker build -t grpc-kubernetes/server:1.0 ./server/
 	```
 
-9. Publish Containers
+10. Publish Containers
 
 	```sh
 	# Container microservice1
@@ -62,7 +64,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ gcloud docker push gcr.io/$PROJECTID/server:1.0
 	```
 
-10. Create Controllers
+11. Create Controllers
 
 	First, change the $PROJECTID variable for each *-controller.yaml file
 
@@ -77,7 +79,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ kubectl create -f server-controller.yaml
 	```
 
-11. Create Services
+12. Create Services
 
 	```sh
 	# Service microservice1
