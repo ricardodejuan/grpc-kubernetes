@@ -113,7 +113,6 @@ $ kubectl get svc
 
 ### Update Microservice 1 to new version
 	
-	```sh
 	# Build Container
 	$ docker build -t grpc-kubernetes/microservice1:2.0 ./microservice1b/
 
@@ -127,20 +126,8 @@ $ kubectl get svc
 
 	# Apply changes
 	$ kubectl apply -f microservice1-controller.yaml
-	```
 
 ### Test Microservice 1 version b
 
-	```sh
 	$ http://EXTERNAL-IP/localCatalogByGenre?genre=Drama-History-Comedy
-	```
-
-
-
-
-
-
-
-
-
 
