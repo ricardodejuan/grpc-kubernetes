@@ -114,22 +114,26 @@ $ kubectl get svc
 	```
 
 ### Update Microservice 1 to version 2.0
-	
-	# Build Container
-	$ docker build -t grpc-kubernetes/microservice1:2.0 ./microservice1b/
 
-	# Publish Container
-	$ docker tag grpc-kubernetes/microservice1:2.0 gcr.io/$PROJECTID/microservice1:2.0
-	$ gcloud docker push gcr.io/$PROJECTID/microservice1:2.0
+```sh	
+# Build Container
+$ docker build -t grpc-kubernetes/microservice1:2.0 ./microservice1b/
 
-	# Update Controller
-	Modify line 13 to version 2.0:
-		- image: gcr.io/$PROJECTID/microservice1b:2.0
+# Publish Container
+$ docker tag grpc-kubernetes/microservice1:2.0 gcr.io/$PROJECTID/microservice1:2.0
+$ gcloud docker push gcr.io/$PROJECTID/microservice1:2.0
 
-	# Apply changes
-	$ kubectl apply -f microservice1-controller.yaml
+# Update Controller
+Modify line 13 to version 2.0:
+	- image: gcr.io/$PROJECTID/microservice1b:2.0
+
+# Apply changes
+$ kubectl apply -f microservice1-controller.yaml
+```
 
 ### Test Microservice 1 version 2.0
 
-	$ http://EXTERNAL-IP/localCatalogByGenre?genre=Drama-History-Comedy
+```sh
+$ http://EXTERNAL-IP/localCatalogByGenre?genre=Drama-History-Comedy
+```
 
