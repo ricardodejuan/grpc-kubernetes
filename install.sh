@@ -8,6 +8,19 @@
 # Design, build and deploy a collection of microservices developed 
 # by gRPC along with Google Cloud Platform and Kubernetes
 #
+# Steps
+# 0. Create a GCP Account
+# 1. Create a New Project in GCP
+# 2. Enable Compute Engine and Container Engine APIs => https://console.developers.google.com/apis/library
+# 3. Enable Google Cloud Shell
+# 4. Configure Cloud Shell Environment
+# gcloud compute zones list
+# gcloud config set compute/zone europe-west1-d
+
+# 5. Setting up Kubernetes
+# Provision a Kubernetes Cluster with GKE using gcloud
+# gcloud container clusters create k0
+# gcloud container clusters get-credentials k0
 
 #!/bin/bash
 PROJECTID=$(gcloud config list project | awk 'FNR ==2 { print $3 }')
@@ -19,6 +32,8 @@ docker rmi $(docker images -q)
 
 docker rmi -f grpc-kubernetes/microservice1:1.0
 docker rmi -f gcr.io/$PROJECTID/microservice1:1.0
+docker rmi -f grpc-kubernetes/microservice1:2.0
+docker rmi -f gcr.io/$PROJECTID/microservice1:2.0
 docker rmi -f grpc-kubernetes/microservice2:1.0
 docker rmi -f gcr.io/$PROJECTID/microservice2:1.0
 docker rmi -f grpc-kubernetes/server:1.0
@@ -108,4 +123,4 @@ kubectl create -f server-service.yaml
 # Modify microservice1-controller.yaml 
 # - image: gcr.io/centering-talon-150121/microservice1b:2.0
 
-# kubectl apply -f frontend-controller.yaml
+# kubectl apply -f microservice1-controller.yaml
