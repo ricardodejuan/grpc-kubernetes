@@ -10,7 +10,7 @@ spec:
         name: microservice2
     spec:
       containers:
-      - image: gcr.io/centering-talon-150121/microservice2:1.0
+      - image: gcr.io/$PROJECTID/microservice2:1.0
         name: microservice2
         ports:
         - containerPort: 50052

@@ -10,7 +10,7 @@ spec:
         name: server
     spec:
       containers:
-      - image: gcr.io/centering-talon-150121/server:1.0
+      - image: gcr.io/$PROJECTID/server:1.0
         name: server
         ports:
         - containerPort: 3000
