@@ -95,7 +95,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 
 ### Test
 
-Get External IP from 'server' service
+Get EXTERNAL-IP from "server" service
 
 ```sh
 $ kubectl get svc
