@@ -135,5 +135,5 @@ $ kubectl apply -f microservice1-controller.yaml
 
 ```sh
 $ http://EXTERNAL-IP/localCatalogByGenre?genre=Drama-History-Comedy
-``
+```
 
