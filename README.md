@@ -11,12 +11,12 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 + Enable Google Cloud Shell
 + Configure Cloud Shell Environment
 
-`$ gcloud compute zones list`
+⋅⋅⋅ `$ gcloud compute zones list`
 
-`$ gcloud config set compute/zone europe-west1-d`
+⋅⋅⋅ `$ gcloud config set compute/zone europe-west1-d`
 
 + Setting up Kubernetes - Provision a Kubernetes Cluster with GKE using gcloud
 
-`$ gcloud container clusters create k0`
+⋅⋅⋅ `$ gcloud container clusters create k0`
 
-`$ gcloud container clusters get-credentials k0`
+⋅⋅⋅ `$ gcloud container clusters get-credentials k0`
