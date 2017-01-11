@@ -3,7 +3,7 @@
 ### Description:
 Design, build and deploy a collection of microservices developed by gRPC along with Google Cloud Platform and Kubernetes.
 
-### Steps to run:
+### Steps to Run:
 
 1. Create a GCP Account [Click](https://cloud.google.com/)
 2. Create a New Project in GCP
@@ -135,5 +135,5 @@ $ kubectl apply -f microservice1-controller.yaml
 
 ```sh
 $ http://EXTERNAL-IP/localCatalogByGenre?genre=Drama-History-Comedy
-```
+``
 
