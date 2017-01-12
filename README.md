@@ -35,7 +35,12 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ ./clean.sh
 	```
 
-9. Build Containers
+9. Get a new API KEY for Microservice 2 [Click](http://imdb.wemakesites.net/#anhcor-authentication)
+
+	Set the API KEY obtained to `microservice2/catalogMicroservice.js file
+
+
+10. Build Containers
 
 	```sh
 	# Container microservice1
@@ -48,7 +53,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ docker build -t grpc-kubernetes/server:1.0 ./server/
 	```
 
-10. Publish Containers
+11. Publish Containers
 
 	```sh
 	# Container microservice1
@@ -64,7 +69,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ gcloud docker push gcr.io/$PROJECTID/server:1.0
 	```
 
-11. Create Controllers
+12. Create Controllers
 
 	First, change the $PROJECTID variable for each *-controller.yaml file
 
@@ -79,7 +84,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ kubectl create -f server-controller.yaml
 	```
 
-12. Create Services
+13. Create Services
 
 	```sh
 	# Service microservice1
@@ -124,7 +129,7 @@ $ docker tag grpc-kubernetes/microservice1:2.0 gcr.io/$PROJECTID/microservice1:2
 $ gcloud docker push gcr.io/$PROJECTID/microservice1:2.0
 
 # Update Controller
-Modify line 13 to version 2.0:
+Modify line 13 to version 2.0 in microservice1-controller.yaml file:
 	- image: gcr.io/$PROJECTID/microservice1b:2.0
 
 # Apply changes
@@ -135,5 +140,5 @@ $ kubectl apply -f microservice1-controller.yaml
 
 ```sh
 $ http://EXTERNAL-IP/localCatalogByGenre?genre=Drama-History-Comedy
-```
+``
 
