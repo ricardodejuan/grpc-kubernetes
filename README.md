@@ -37,7 +37,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 
 9. Get a new API KEY for Microservice 2 [Click](http://imdb.wemakesites.net/#anhcor-authentication)
 
-	Set the API KEY obtained to `microservice2/catalogMicroservice.js` file
+	Set the new API KEY to `microservice2/catalogMicroservice.js file
 
 
 10. Build Containers
