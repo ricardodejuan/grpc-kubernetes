@@ -5,9 +5,9 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 
 ### Steps to Run:
 
-1. Create a GCP Account [Click](https://cloud.google.com/)
+1. Create a GCP Account [Click Here](https://cloud.google.com/)
 2. Create a New Project in GCP
-3. Enable Compute Engine and Container Engine APIs [Click](https://console.developers.google.com/apis/library)
+3. Enable Compute Engine and Container Engine APIs [Click Here](https://console.developers.google.com/apis/library)
 4. Enable Google Cloud Shell
 5. Configure Cloud Shell Environment
 
@@ -35,7 +35,7 @@ Design, build and deploy a collection of microservices developed by gRPC along w
 	$ ./clean.sh
 	```
 
-9. Get a new API KEY for Microservice 2 [Click](http://imdb.wemakesites.net/#anhcor-authentication)
+9. Get a new API KEY for Microservice 2 [Click Here](http://imdb.wemakesites.net/#anhcor-authentication)
 
 	Set the new API KEY to `microservice2/catalogMicroservice.js file
 
